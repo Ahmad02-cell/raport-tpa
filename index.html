@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Raport Digital TPA</title>
+</head><script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<body style="font-family:Arial; background:#eef2f6;">
+
+<div style="
+  width:90%;
+  max-width:800px;
+  margin:auto;
+  background:white;
+  padding:20px;
+">
+
+  <h1 style="text-align:center;">Surah An-Naas</h1>
+
+  <p style="text-align:center; font-size:22px;">
+    بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+  </p>
+
+  <div style="display:flex; gap:20px; margin-top:20px;">
+    <div>
+  <iframe
+    width="260"
+    height="160"
+    src="https://www.youtube.com/embed/KeCtCMBbYNM"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+
+
+    <div>
+      <h3>Nilai</h3>
+      <p style="font-size:40px; color:green;">90</p>
+    </div>
+  </div>
+<div style="
+  display:flex;
+  justify-content:space-around;
+  margin-top:30px;
+">
+
+  <div style="width:150px; text-align:center;">
+    <canvas id="makhraj"></canvas>
+    <p>Makharijul Huruf</p>
+  </div>
+
+  <div style="width:150px; text-align:center;">
+    <canvas id="tajwid"></canvas>
+    <p>Tajwid</p>
+  </div>
+
+  <div style="width:150px; text-align:center;">
+    <canvas id="fashahah"></canvas>
+    <p>Fashahah</p>
+  </div>
+
+</div>
+
+
+</div>
+<script>
+function grafik(id, nilai){
+ new Chart(document.getElementById(id), {
+  options: {
+    responsive: true,
+    maintainAspectRatio: true,
+    cutout: '70%',
+    plugins: {
+      legend: { display: false }
+    }
+  },
+
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: [nilai, 100-nilai],
+        backgroundColor: ['#2ecc71','#ddd']
+      }]
+    },
+    options: {
+      cutout: '70%',
+      plugins: { legend: { display:false } }
+    }
+  });
+}
+
+grafik('makhraj', 93);
+grafik('tajwid', 90);
+grafik('fashahah', 80);
+</script>
+
+</body>
+</html>
