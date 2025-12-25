@@ -2,6 +2,19 @@
 <html>
 <head>
   <title>Raport Digital TPA</title>
+<style>
+@font-face {
+  font-family: 'UthmanicHafs';
+  src: url('fonts/KFGQPC-Uthmanic-Hafs.ttf');
+}
+
+.arab {
+  font-family: 'UthmanicHafs', serif;
+  font-size: 28px;
+  direction: rtl;
+}
+</style>
+
 </head><script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <body style="font-family:Arial; background:#eef2f6;">
 
@@ -15,9 +28,16 @@
 
   <h1 style="text-align:center;">Surah An-Naas</h1>
 
-  <p style="text-align:center; font-size:22px;">
-    بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-  </p>
+<!-- Bismillah -->
+<p class="arab" style="text-align:center; margin-bottom:15px;">
+بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+</p>
+
+<!-- Ayat Surah -->
+<p class="arab" style="text-align:center; line-height:2.2;">
+قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ ۝١ مَلِكِ ٱلنَّاسِ ۝٢ إِلَٰهِ ٱلنَّاسِ ۝٣ مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ ۝٤ ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ ۝٥ مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ ۝٦
+</p>
+
 
   <div style="display:flex; gap:20px; margin-top:20px;">
     <div>
@@ -93,8 +113,8 @@ function grafik(id, nilai){
   });
 }
 
-grafik('makhraj', 93);
-grafik('tajwid', 90);
+grafik('makhraj', 87);
+grafik('tajwid', 83);
 grafik('fashahah', 80);
 </script>
 
